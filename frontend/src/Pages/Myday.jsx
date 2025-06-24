@@ -1,26 +1,29 @@
 import { nanoid } from "nanoid";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import {  asyncAddTask } from "../Store/actions/TaskAction";
+import { asyncAddTask } from "../Store/actions/TaskAction";
 import TaskCard from "../Components/TaskCart";
 
 const Myday = () => {
-  const { register, handleSubmit,reset } = useForm();
+  const { register, handleSubmit, reset } = useForm();
+  const dispatch = useDispatch();
   const { user } = useSelector((state) => state.userSlice);
   const { taskList } = useSelector((state) => state.taskSlice);
 
-  
-  const dispatch = useDispatch();
 
   const submittask = (tskList) => {
-   const task = {
-    id:nanoid(),
-    task:tskList.task
+    if(!tskList.title?. trim()){
+      return
+    }
 
-   }
-   console.log(task)
-   dispatch(asyncAddTask(task));
-   reset()
+    const task = {
+      id: nanoid(),
+      title: tskList.title,
+      subtask: "",
+      checked: false,
+    };
+    dispatch(asyncAddTask(task));
+    reset();
   };
 
   return (
@@ -51,27 +54,26 @@ const Myday = () => {
       </div>
       {/* task */}
       <div className="max-w-3xl w-full flex flex-col gap-2 mt-5 max-h-[300px] overflow-y-auto pr-2 space-y-4 custom-scrollbar">
-      {taskList.map((t) => (
-        <TaskCard key={t.id} tsk={t} />
-      ))}
-    </div>
+        {taskList.map((t) => (
+          <TaskCard key={t.id} tsk={t} />
+        ))}
+      </div>
 
       {/* Add Task Bar Pinned to Bottom */}
       <form
-  onSubmit={handleSubmit(submittask)}
-  className="absolute bottom-6 left-[20px] w-[calc(100%-250px)] px-4 sm:px-8 z-10"
->
-  <div className="max-w-3xl flex items-center bg-[#121212] border border-gray-700 px-4 py-3 rounded-xl shadow-md">
-    <span className="text-gray-400 mr-3 text-xl">+</span>
-    <input
-      {...register("task")}
-      type="text"
-      placeholder="Add task"
-      className="bg-transparent outline-none flex-1 text-sm placeholder-gray-400 text-white"
-    />
-  </div>
-</form>
-
+        onSubmit={handleSubmit(submittask)}
+        className="absolute bottom-6 left-[20px] w-[calc(100%-250px)] px-4 sm:px-8 z-10"
+      >
+        <div className="max-w-3xl flex items-center bg-[#121212] border border-gray-700 px-4 py-3 rounded-xl shadow-md">
+          <span className="text-gray-400 mr-3 text-xl">+</span>
+          <input
+            {...register("title")}
+            type="text"
+            placeholder="Add task"
+            className="bg-transparent outline-none flex-1 text-sm placeholder-gray-400 text-white"
+          />
+        </div>
+      </form>
 
       {/* Blue Glow */}
       <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-500 rounded-full opacity-20 blur-[120px] pointer-events-none z-0" />

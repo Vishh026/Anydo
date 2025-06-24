@@ -2,7 +2,7 @@ import axios from "../../api/axiosConfig"
 import { loadusers } from "../Reducers/UserSlice";
 
 
-export const asyncCurrentUser = () => async(dispatch,getstate) => {
+export const asyncCurrentUser = () => async(dispatch,getState) => {
     try {
         const user = JSON.parse(localStorage.getItem("user"));
         if(user) dispatch(loadusers(user))
@@ -13,7 +13,7 @@ export const asyncCurrentUser = () => async(dispatch,getstate) => {
     }
 }
 
-export const asyncSignupUser = (user) => async(dispatch,getstate) => {
+export const asyncSignupUser = (user) => async(dispatch,getState) => {
     try {
         const {data} = await axios.post("/users" ,user)
         console.log(data)
@@ -21,7 +21,7 @@ export const asyncSignupUser = (user) => async(dispatch,getstate) => {
         console.error("Error in signupUser action:", error);
     }
 }
-export const asyncLoginUser = (user) => async(dispatch,getstate) => {
+export const asyncLoginUser = (user) => async(dispatch,getState) => {
     try {
         const { data }  = await axios.get(`/users?email=${user.email}&password=${user.password}`)
         localStorage.setItem("user" ,JSON.stringify(data[0]))
@@ -29,12 +29,13 @@ export const asyncLoginUser = (user) => async(dispatch,getstate) => {
         console.error("Error in loginUser action:", error);
     }
 }
-export const asyncLogoutUser = () => async(dispatch,getstate) => {
+export const asyncLogoutUser = () => async(dispatch,getState) => {
     try {
         localStorage.removeItem("user",null)
     } catch (error) {
         console.error("Error in logoutUser action:", error);
     }
 }
+
 
 

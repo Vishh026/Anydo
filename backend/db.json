@@ -13,155 +13,45 @@
       "id": "6KsnaR0lTl-Uq916rLXmW",
       "username": "vishnu",
       "email": "radhe@gmail.com",
-      "password": "123"
+      "password": "123",
+      "tasks": []
+    },
+    {
+      "id": "t-0tBx_aQhXZsMdmow6PM",
+      "username": "vishnu",
+      "email": "vaishnavidhavan00@gmail.com",
+      "password": "123",
+      "isAdmin": false
+    },
+    {
+      "id": "9502yXSCnC8-vFDN3TB6M",
+      "username": "radhe",
+      "email": "radhe@gmail.com",
+      "password": "123",
+      "isAdmin": false,
+      "tasks": []
+    },
+    {
+      "id": "PWFJf5Ee35CUvjbM5sCdp",
+      "username": "hey",
+      "email": "hey@gmail.com",
+      "password": "1234",
+      "isAdmin": false,
+      "tasks": []
     }
   ],
   "tasks": [
     {
-      "id": "1",
-      "title": "Task 1",
-      "description": "Description for Task 1",
-      "status": "pending",
-      "assignedTo": "john_doe"
+      "id": "_wncE6WnaDFbJRiQgwMql",
+      "title": "fjgnj",
+      "subtask": "",
+      "checked": false
     },
     {
-      "id": "2",
-      "title": "Task 2",
-      "description": "Description for Task 2",
-      "status": "completed",
-      "assignedTo": "vishnu"
-    },
-    {
-      "id": "0kcLFjbJ_r4xdJrwjeDKC",
-      "task": "fjngj"
-    },
-    {
-      "id": "jZjN-0MKECA0bY8GM0FJW",
-      "task": "jgjgb"
-    },
-    {
-      "id": "KY93IiOBDRY2NmpSIXY-3",
-      "task": "gnbnb"
-    },
-    {
-      "id": "Q4UPCtFWkCINKf4OYWxw_",
-      "task": "ngn b"
-    },
-    {
-      "id": "aDFs8Ewx7ojLmkgKHW6Sj",
-      "task": "ngn "
-    },
-    {
-      "id": "mPwY6zXNlBJD08OcGYko7",
-      "task": "mg mn b"
-    },
-    {
-      "id": "9cCi3UWIoHXM6UPvA--h-",
-      "task": "mgnngb"
-    },
-    {
-      "id": "R6qpT8aV_kTpqfxg8oCmI",
-      "task": "mgnhnmn"
-    },
-    {
-      "id": "NNBfMVdoXaEs-_HwBYJNX",
-      "task": "ngmnng"
-    },
-    {
-      "id": "UEOBGdCU94D8N1LHQYT_a",
-      "task": "fgn"
-    },
-    {
-      "id": "5erJE5Vr7QseRYFlu3XNU",
-      "task": "vishnu"
-    },
-    {
-      "id": "kyppL_mADEf9CBCpJFAoM",
-      "task": "fgmn"
-    },
-    {
-      "id": "WwKrr6tnD-gVkq11vIKDz",
-      "task": "gn"
-    },
-    {
-      "id": "ZsvFbvdb7AFhrVbyHDSRM",
-      "task": "gmnmg"
-    },
-    {
-      "id": "n8YctCqO3CQgXjhjfTQmD",
-      "task": "mfbn"
-    },
-    {
-      "id": "g3kHsxIo2hGntMxQ2fkDI",
-      "task": "fnn"
-    },
-    {
-      "id": "1LzUNYq82OsfazXjSJTiP",
-      "task": "tmgn"
-    },
-    {
-      "id": "DPwEkMhmH6MM3rgkwZeSq",
-      "task": "fnng"
-    },
-    {
-      "id": "7MFt-MoGKUMzT56N9UNEQ",
-      "task": "fgn"
-    },
-    {
-      "id": "xI-OohFCShmhU86eVDksC",
-      "task": "fjgnjng"
-    },
-    {
-      "id": "qSgt0tBf-Jg3h_bOBJtkl",
-      "task": "fmgn"
-    },
-    {
-      "id": "CwZ-6-XgruK7Y_LtDE8Va",
-      "task": "ng"
-    },
-    {
-      "id": "BbwotdfHp5aoVRMvvFraD",
-      "task": "gn"
-    },
-    {
-      "id": "kniOzRtBHvGM8bza7ATW0",
-      "task": "gn"
-    },
-    {
-      "id": "f-qEDATvqpFJAnzr0aoFW",
-      "task": "gn"
-    },
-    {
-      "id": "isgzoydGaf3pcn2KOWsrg",
-      "task": "jgh"
-    },
-    {
-      "id": "impyMYiaYoVjj-NQpsR12",
-      "task": "rahul"
-    },
-    {
-      "id": "PbV-KPGrNyLnbxPLNyHMW",
-      "task": "hey"
-    },
-    {
-      "id": "xez8dyYhm9zKMud2WnmbX",
-      "task": "are ou ready"
-    },
-    {
-      "id": "P6PdLSByOcMdT_ykfVr3j",
-      "task": "want work on it"
-    },
-    {
-      "id": "q_PFKx2sQbolVnOPbBIyV",
-      "task": "nbfnb"
-    },
-    {
-      "id": "HvkNNkKOl_VZhIYz0fdZi",
-      "task": "fgnjnfg"
-    },
-    {
-      "id": "HwsFAy9JBcoTWnMdNlUOL",
-      "task": "hey"
+      "id": "zfNnd5vJvcNnca30HRSao",
+      "title": "fhvh",
+      "subtask": "",
+      "checked": false
     }
   ]
 }

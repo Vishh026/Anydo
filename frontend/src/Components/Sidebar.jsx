@@ -73,18 +73,18 @@ const Sidebar = () => {
             <Plus className="w-4 h-4 cursor-pointer text-gray-400 hover:text-white" />
           </div>
           <ul className="space-y-3">
-            <li className="flex items-center gap-2 text-white hover:text-blue-500 cursor-pointer">
+            <NavLink to="/mylist/personal" className="flex items-center gap-2 text-white hover:text-blue-500 cursor-pointer">
               <User className="w-4 h-4" />
               Personal
-            </li>
-            <li className="flex items-center gap-2 text-white hover:text-blue-500 cursor-pointer">
+            </NavLink>
+            <NavLink to="/mylist/working" className="flex items-center gap-2 text-white hover:text-blue-500 cursor-pointer">
               <Briefcase className="w-4 h-4" />
               Work
-            </li>
-            <li className="flex items-center gap-2 text-white hover:text-blue-500 cursor-pointer">
+            </NavLink>
+            <NavLink to="/mylist/glosary" className="flex items-center gap-2 text-white hover:text-blue-500 cursor-pointer">
               <ShoppingCart className="w-4 h-4" />
               Grocery List
-            </li>
+            </NavLink>
           </ul>
         </div>
       </div>

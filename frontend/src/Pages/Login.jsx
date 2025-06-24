@@ -1,19 +1,28 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { asyncLoginUser } from "../Store/actions/UserActions";
-import { useDispatch } from "react-redux";
+import { asyncLoginUser, asyncLogoutUser } from "../Store/actions/UserActions";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 
 const Login = () => {
+  const { user } = useSelector((state) => state.userSlice);
+  
+  
   const { register, handleSubmit } = useForm();
   const disaptch = useDispatch();
   const navigate = useNavigate();
 
   const loginHandler = (user) => {
     disaptch(asyncLoginUser(user))
+    toast.success("Login Successfully")  
     navigate("/")
   }
-
+  const logoutHandler = () => {
+    disaptch(asyncLogoutUser())
+    toast.success("Logout Successfully")  
+    navigate("/")
+  }
 
   
   return (
@@ -51,14 +60,26 @@ const Login = () => {
               className="w-full px-4 py-2 bg-black/20 text-white placeholder-gray-400 border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-
-          <button
+              {user ? (
+                <button
+            
+           onClick={() => logoutHandler()}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-xl transition duration-200 mt-3"
+          >
+           Logout
+          </button>
+                
+              ) : (
+                <button
             type="Login"
            onClick={() => loginHandler()}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-xl transition duration-200"
           >
            Login
           </button>
+              )}
+          
+           
         </form>
 
         <p className="text-sm text-center text-gray-400 mt-4">

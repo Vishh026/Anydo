@@ -11,7 +11,8 @@ const Signup = () => {
 
    const signupHandler = (user) => {
      user.id = nanoid();
-     user.isAdmin = false
+     user.isAdmin = false,
+     user.tasks = []
      dispatch(asyncSignupUser(user))
      navigate("/login");
    }
