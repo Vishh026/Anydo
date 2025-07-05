@@ -3,13 +3,28 @@ import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncAddTask } from "../Store/actions/TaskAction";
 import TaskCard from "../Components/TaskCart";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Myday = () => {
   const { register, handleSubmit, reset } = useForm();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.userSlice);
   const { taskList } = useSelector((state) => state.taskSlice);
+  // const [quote ,setQuote] = useState();
 
+  // const quoteGenrator = async() => {
+  //   try {
+  //     const res = await axios.get("https://zenquotes.io/api/quotes") 
+  //     console.log(res)
+  //   } catch (error) {
+  //     console.log("Error for genrating quote",error);
+      
+  //   }
+  // }
+  // useEffect(()=> {
+  //   quoteGenrator()
+  // },[])
 
   const submittask = (tskList) => {
     if(!tskList.title?. trim()){
